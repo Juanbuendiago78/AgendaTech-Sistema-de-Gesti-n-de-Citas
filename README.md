@@ -111,7 +111,7 @@ El propósito fue comprender la función de cada archivo y de las principales in
 
 ## 9. Autor
 
-**Desarrollador:** [Nombre completo del estudiante]
+**Desarrollador:** [Juan David Buendia Gomez]
 
 **Proyecto académico:** Seminario Gestión de Software Ágil asistido por Inteligencia Artificial.
 
