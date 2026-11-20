@@ -61,11 +61,13 @@ Las capturas permiten observar las diferentes etapas de construcción de la apli
 
 ### 6.1 Primera versión HTML
 
-![Primera versión HTML](capturas/version_html.png)
+![Primera versión HTML](<img width="1816" height="896" alt="Captura de pantalla 2026-11-19 234806" src="https://github.com/user-attachments/assets/9908b524-25f3-4bc2-8f5b-8dc74c7e5e9a" />
+)
 
 ### 6.2 Diseño visual con CSS
 
-![Diseño visual de AgendaTech](capturas/version_css.png)
+![Diseño visual de AgendaTech](<img width="1892" height="927" alt="Captura de pantalla 2026-11-20 163847" src="https://github.com/user-attachments/assets/d942b6f0-7335-4e46-9c7b-4043202145d6" />
+)
 
 ### 6.3 Funcionamiento de la aplicación
 
