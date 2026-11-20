@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Sistema de gestión de citas AgendaTech">
+
+    <title>AgendaTech | Gestión de Citas</title>
+
+    <!-- Conexión con CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Conexión con JavaScript -->
+   <script src="./js/app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Contenedor principal de la aplicación -->
+    <div class="app-container">
+
+        <!-- Menú lateral -->
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-header">
+                <h1 class="logo">Agenda<span>Tech</span></h1>
+                <p class="logo-description">Sistema de gestión de citas</p>
+            </div>
+
+            <!-- Navegación principal -->
+            <nav class="sidebar-nav" aria-label="Navegación principal">
+
+                <ul class="nav-list">
+
+                    <li class="nav-item">
+                        <a href="#dashboard" class="nav-link active" aria-current="page">
+                            <span class="nav-icon" aria-hidden="true">▦</span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#citas" class="nav-link">
+                            <span class="nav-icon" aria-hidden="true">▤</span>
+                            <span>Todas las citas</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#nueva-cita" class="nav-link">
+                            <span class="nav-icon" aria-hidden="true">＋</span>
+                            <span>Nueva cita</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Información inferior del menú -->
+            <div class="sidebar-footer">
+                <p>AgendaTech</p>
+                <span>Gestión de citas</span>
+            </div>
+
+        </aside>
+
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+
+            <!-- Encabezado -->
+            <header class="main-header">
+
+                <div class="header-left">
+                    <button
+                        type="button"
+                        class="menu-toggle"
+                        id="menu-toggle"
+                        aria-label="Abrir o cerrar menú"
+                        aria-controls="sidebar"
+                        aria-expanded="false">
+                        ☰
+                    </button>
+
+                    <div class="header-title">
+                        <h2>Panel de administración</h2>
+                        <p>Bienvenido al sistema de gestión de citas.</p>
+                    </div>
+                </div>
+
+                <div class="header-brand">
+                    <span>AgendaTech</span>
+                </div>
+
+            </header>
+
+
+            <!-- Sección Dashboard -->
+            <section class="dashboard-section" id="dashboard">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Dashboard</h2>
+                        <p>Resumen general de las citas registradas.</p>
+                    </div>
+
+                    <a href="#nueva-cita" class="btn btn-primary">
+                        + Nueva cita
+                    </a>
+                </div>
+
+
+                <!-- Tarjetas de estadísticas -->
+                <div class="stats-container">
+
+                    <article class="stat-card stat-total">
+                        <div class="stat-info">
+                            <p>Total de citas</p>
+                            <h3 id="total-citas">0</h3>
+                        </div>
+
+                        <div class="stat-icon" aria-hidden="true">▤</div>
+                    </article>
+
+
+                    <article class="stat-card stat-pending">
+                        <div class="stat-info">
+                            <p>Citas pendientes</p>
+                            <h3 id="citas-pendientes">0</h3>
+                        </div>
+
+                        <div class="stat-icon" aria-hidden="true">◷</div>
+                    </article>
+
+
+                    <article class="stat-card stat-confirmed">
+                        <div class="stat-info">
+                            <p>Citas confirmadas</p>
+                            <h3 id="citas-confirmadas">0</h3>
+                        </div>
+
+                        <div class="stat-icon" aria-hidden="true">✓</div>
+                    </article>
+
+
+                    <article class="stat-card stat-cancelled">
+                        <div class="stat-info">
+                            <p>Citas canceladas</p>
+                            <h3 id="citas-canceladas">0</h3>
+                        </div>
+
+                        <div class="stat-icon" aria-hidden="true">×</div>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- Sección de gestión de citas -->
+            <section class="appointments-section" id="citas">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Todas las citas</h2>
+                        <p>Consulta y administra los registros.</p>
+                    </div>
+                </div>
+
+
+                <!-- Buscador y filtros -->
+                <div class="filters-container">
+
+                    <div class="search-container">
+
+                        <label for="buscar-cita">Buscar citas</label>
+
+                        <input
+                            type="search"
+                            id="buscar-cita"
+                            name="buscar-cita"
+                            placeholder="Buscar por nombre o documento..."
+                            autocomplete="off">
+
+                    </div>
+
+
+                    <div class="filter-container">
+
+                        <label for="filtro-estado">Filtrar por estado</label>
+
+                        <select id="filtro-estado" name="filtro-estado">
+
+                            <option value="">Todos los estados</option>
+                            <option value="pendiente">Pendiente</option>
+                            <option value="confirmada">Confirmada</option>
+                            <option value="cancelada">Cancelada</option>
+                            <option value="completada">Completada</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Tabla de citas -->
+                <div class="table-container">
+
+                    <table class="appointments-table">
+
+                        <caption class="visually-hidden">
+                            Listado de citas registradas en AgendaTech
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Cliente</th>
+                                <th scope="col">Documento</th>
+                                <th scope="col">Teléfono</th>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Hora</th>
+                                <th scope="col">Motivo</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tabla-citas">
+
+                            <!-- JavaScript insertará aquí las citas registradas -->
+
+                            <tr id="mensaje-sin-citas">
+                                <td colspan="9" class="empty-message">
+                                    No hay citas registradas.
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- Sección de registro y edición de citas -->
+            <section class="appointment-form-section" id="nueva-cita">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2 id="titulo-formulario">Registrar nueva cita</h2>
+                        <p>Completa los datos para registrar una cita.</p>
+                    </div>
+
+                </div>
+
+
+                <!-- Formulario principal -->
+                <form id="formulario-cita" class="appointment-form">
+
+                    <!-- Identificador de la cita -->
+                    <input
+                        type="hidden"
+                        id="cita-id"
+                        name="cita-id">
+
+
+                    <!-- Información del cliente -->
+                    <fieldset class="form-fieldset">
+
+                        <legend>Información del cliente</legend>
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="nombre">Nombre del cliente *</label>
+
+                                <input
+                                    type="text"
+                                    id="nombre"
+                                    name="nombre"
+                                    placeholder="Ingrese el nombre completo"
+                                    maxlength="100"
+                                    autocomplete="name"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="documento">Documento de identificación *</label>
+
+                                <input
+                                    type="text"
+                                    id="documento"
+                                    name="documento"
+                                    placeholder="Ingrese el documento"
+                                    maxlength="30"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="telefono">Teléfono *</label>
+
+                                <input
+                                    type="tel"
+                                    id="telefono"
+                                    name="telefono"
+                                    placeholder="Ingrese el teléfono"
+                                    maxlength="20"
+                                    autocomplete="tel"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <!-- Información de la cita -->
+                    <fieldset class="form-fieldset">
+
+                        <legend>Información de la cita</legend>
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="fecha">Fecha *</label>
+
+                                <input
+                                    type="date"
+                                    id="fecha"
+                                    name="fecha"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="hora">Hora *</label>
+
+                                <input
+                                    type="time"
+                                    id="hora"
+                                    name="hora"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="estado">Estado de la cita *</label>
+
+                                <select
+                                    id="estado"
+                                    name="estado"
+                                    required>
+
+                                    <option value="pendiente">Pendiente</option>
+                                    <option value="confirmada">Confirmada</option>
+                                    <option value="cancelada">Cancelada</option>
+                                    <option value="completada">Completada</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group form-group-full">
+
+                                <label for="motivo">Motivo de la cita *</label>
+
+                                <textarea
+                                    id="motivo"
+                                    name="motivo"
+                                    rows="4"
+                                    maxlength="500"
+                                    placeholder="Describa el motivo de la cita..."
+                                    required></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <!-- Botones del formulario -->
+                    <div class="form-actions">
+
+                        <button
+                            type="reset"
+                            class="btn btn-secondary"
+                            id="btn-limpiar">
+
+                            Limpiar
+
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                            id="btn-guardar">
+
+                            Guardar cita
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- Pie de página -->
+            <footer class="main-footer">
+
+                <p>
+                    AgendaTech &copy; 2026 - Sistema de gestión de citas.
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
