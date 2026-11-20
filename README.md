@@ -67,7 +67,8 @@ Las capturas permiten observar las diferentes etapas de construcción de la apli
 
 ### 6.2 Diseño visual con CSS
 
-![Diseño visual de AgendaTech](<img width="1892" height="927" alt="Captura de pantalla 2026-11-20 163847" src="https://github.com/user-attachments/assets/d942b6f0-7335-4e46-9c7b-4043202145d6" />
+![Diseño visual de AgendaTech](<<img width="1816" height="896" alt="Captura de pantalla 2026-11-19 234806" src="https://github.com/user-attachments/assets/a82f8db5-2a12-43fd-93b5-d8613952b75b" />
+>
 )
 
 ### 6.3 Funcionamiento de la aplicación
