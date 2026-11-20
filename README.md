@@ -61,7 +61,8 @@ Las capturas permiten observar las diferentes etapas de construcción de la apli
 
 ### 6.1 Primera versión HTML
 
-![Primera versión HTML](<img width="1816" height="896" alt="Captura de pantalla 2026-11-19 234806" src="https://github.com/user-attachments/assets/9908b524-25f3-4bc2-8f5b-8dc74c7e5e9a" />
+![Primera versión HTML](<<img width="1816" height="896" alt="Captura de pantalla 2026-11-19 234806" src="https://github.com/user-attachments/assets/eab1c1d5-6e22-40e4-8069-e2630a8b9708" />
+>
 )
 
 ### 6.2 Diseño visual con CSS
