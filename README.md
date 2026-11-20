@@ -71,7 +71,8 @@ Las capturas permiten observar las diferentes etapas de construcción de la apli
 
 ### 6.3 Funcionamiento de la aplicación
 
-![Pruebas CRUD](capturas/pruebas_crud.png)
+![Pruebas CRUD](<img width="1892" height="927" alt="Captura de pantalla 2026-11-20 163847" src="https://github.com/user-attachments/assets/9ecfba66-73ad-40e4-8d38-17e76f94defe" />
+g)
 
 ## 7. Prompts utilizados durante el desarrollo
 
