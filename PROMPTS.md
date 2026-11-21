@@ -74,32 +74,6 @@ Se pidió a ChatGPT transformar la estructura HTML en una interfaz moderna, prof
 
 Una interfaz visualmente organizada, manteniendo la estructura HTML existente.
 
----
-Prompt de prueba si quieren mejorar el diseño de mi inventario  
-## PROMPT 03.1 – Mejoramiento del diseño visual
-
-**Objetivo:** Perfeccionar la primera versión del diseño.
-
-**¿Qué se solicitó?**
-
-Después de revisar la primera propuesta visual, se identificó que el diseño podía mejorar. Por esta razón, se solicitó una segunda revisión enfocada en la apariencia de AgendaTech.
-
-**Mejoras solicitadas:**
-
-- Mejorar la combinación de colores.
-- Perfeccionar la distribución de los elementos.
-- Mejorar la presentación de las tarjetas.
-- Organizar la tabla de citas.
-- Mejorar los formularios y botones.
-- Adaptar la interfaz a pantallas pequeñas.
-- Mantener los identificadores y las clases existentes.
-
-**Resultado esperado:**
-
-Una interfaz más profesional y apropiada para un sistema de administración de citas, sin modificar las funcionalidades existentes.
-
----
-
 ## PROMPT 04 – Implementación de las funcionalidades CRUD
 
 **Objetivo:** Desarrollar la lógica de la aplicación utilizando JavaScript.
