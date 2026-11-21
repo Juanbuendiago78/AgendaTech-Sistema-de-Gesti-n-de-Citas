@@ -75,7 +75,7 @@ Se pidió a ChatGPT transformar la estructura HTML en una interfaz moderna, prof
 Una interfaz visualmente organizada, manteniendo la estructura HTML existente.
 
 ---
-
+Prompt de prueba si quieren mejorar el diseño de mi inventario  
 ## PROMPT 03.1 – Mejoramiento del diseño visual
 
 **Objetivo:** Perfeccionar la primera versión del diseño.
